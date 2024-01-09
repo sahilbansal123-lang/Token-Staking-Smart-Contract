@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/StakeToken.sol": "Staking"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/StakeToken.sol": {
+			"keccak256": "0xb9d4d1e6308ef6d705eb2697eff1e1faeebf935eafc9ff2bce7bbfe43047f52c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cdc29e7451e1104b1f24ab3a642697609d7cc87f2370da8a96593864ac75b24f",
+				"dweb:/ipfs/QmNzq9r2ECk6zoexxW5dniRD53gz4f4AEF6oGkkerotXTB"
+			]
+		}
+	},
+	"version": 1
+}
