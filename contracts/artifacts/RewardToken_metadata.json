@@ -229,7 +229,7 @@
 						"type": "uint8"
 					}
 				],
-				"stateMutability": "view",
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
@@ -483,11 +483,11 @@
 			]
 		},
 		"contracts/RewardToken.sol": {
-			"keccak256": "0x968defa8aa75ebca7dd1f5297d0e7d0fff20fbd259ef1ab1e54b207955d8b98e",
+			"keccak256": "0x6a30f7987ce5f4c4e587e8d1b98563593d61f9fc84821dccd5c1763609a99aa4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://44901606648d2f65d7750fca46154954c1cc0b5e3c61f9e63a025634c7b7e10d",
-				"dweb:/ipfs/QmXvseohwgfr17ppDUcBH1hEYaTABC6g1pRZeETv1bMDxy"
+				"bzz-raw://3d48f2c0344fcef2d2d655297dd0387dd2eb57769ab19ff5d1382c7484e15d3b",
+				"dweb:/ipfs/QmdsYtHDjH4sJH372FfoH23gZ5bRnRs28QvYF3JTsfKWbi"
 			]
 		}
 	},

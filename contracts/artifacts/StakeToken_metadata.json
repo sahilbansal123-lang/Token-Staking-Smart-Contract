@@ -229,7 +229,7 @@
 						"type": "uint8"
 					}
 				],
-				"stateMutability": "view",
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
@@ -483,11 +483,11 @@
 			]
 		},
 		"contracts/StakeToken.sol": {
-			"keccak256": "0x0b544a6034306933e70af91d91e4c8df1cde68e8306ea7d3035afdbc70177d42",
+			"keccak256": "0x940a0a0d55abefbec87d6b9c91ee8586b75681a9ddbd3293043ee279d646f531",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a96ac36050602957749dfb59197f9eb509eebfbdb38495db2ec0caac2f65d627",
-				"dweb:/ipfs/QmPQmN8TLLGxUYH9VL865vMWPhwAaezPCg8oPcBKgNnYoZ"
+				"bzz-raw://2d02a840a11f5e9bd5fba4df98a3301ecfb88fdf6b42b473113b44309f7d4c9e",
+				"dweb:/ipfs/QmW9ioYMvenA5i2o3u9zQBLmPfA3ugYMrTEmvZjAYFptsE"
 			]
 		}
 	},

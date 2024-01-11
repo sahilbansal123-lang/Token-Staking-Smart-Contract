@@ -112,6 +112,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "getReward",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "lastUpdateTime",
 				"outputs": [
 					{
@@ -197,6 +204,19 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "stake",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
@@ -221,7 +241,7 @@
 						"type": "address"
 					}
 				],
-				"name": "useRewardPerTokenPaid",
+				"name": "userRewardPerTokenPaid",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -230,6 +250,19 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -285,11 +318,11 @@
 			]
 		},
 		"contracts/Staking.sol": {
-			"keccak256": "0xf547ced345297535d2b4b9319765b2800d0996ed1dfa71b0acc70a4278411e5a",
+			"keccak256": "0xcd8f896a36ef7d434397d55256486e5b9983d0990505f375132bc8fbe8e5184a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a862c44116ed6e898ee29d09acd953125eb8ae2c47af7ebe576722dcf899750d",
-				"dweb:/ipfs/QmVaKyufQroTRKCgkHMHY5DhFTTgDrpFNkiuNxS6s5qZuU"
+				"bzz-raw://9c4bb5835f783433935ccac01d9571b0c3cd6108801f31da0e9f48653ad4bef5",
+				"dweb:/ipfs/QmV7BvipRpKudqTnoc7jmxsqvnKJVQNwxKFYLB2oJGPjcd"
 			]
 		}
 	},

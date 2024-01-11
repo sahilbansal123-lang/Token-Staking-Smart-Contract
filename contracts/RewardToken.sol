@@ -8,4 +8,8 @@ contract RewardToken is ERC20 {
     constructor(uint256 initialSupply) ERC20("RewardToken", "RWT") {
         _mint(msg.sender, initialSupply);
     }
+
+    function decimals() public pure override  returns (uint8) {
+        return 0;
+    }
 }

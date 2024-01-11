@@ -39,9 +39,54 @@ contract Staking is ReentrancyGuard {
     }
 
     function earned(address account) public view returns(uint) {
-        return(stakedBalance[account]*(rewardPerToken()-userRewardPerTokenPaid[account]))
+        return(stakedBalance[account]*(rewardPerToken()-userRewardPerTokenPaid[account])) + rewards[account];
+        //      USER INVESTMENT * TOTAL REWARDS - AND ALREADY PAID REWARD 
     }
 
+    modifier updateReward(address account) {
+        rewardPerTokenStored = rewardPerToken();
+        lastUpdateTime = block.timestamp;
+        rewards[account] = earned(account);
+        userRewardPerTokenPaid[account] = rewardPerTokenStored;
+        _;
+    }
+
+    function stake(uint amount) external nonReentrant updateReward(msg.sender) {
+        require( amount > 0, "Amount Must be greater than zero");
+        totalStakedTokens += amount;
+        stakedBalance[msg.sender]+= amount;
+        emit Staked(msg.sender, amount);
+
+        bool success = s_stakeingToken.transferFrom(msg.sender, address(this), amount); 
+        require(success, "Transfer Failed");
+    } 
+
+    function withdrawn(uint amount) external nonReentrant updateReward(msg.sender) {
+        require( amount > 0, "Amount Must be greater than zero");
+        totalStakedTokens -= amount;
+        stakedBalance[msg.sender] -= amount;
+        emit Withdrawn(msg.sender, amount);
+
+        bool success = s_stakeingToken.transfer(msg.sender, amount); 
+        require(success, "Transfer Failed");
+    } 
+    
+    function getReward() external nonReentrant updateReward(msg.sender) {
+        uint reward = rewards[msg.sender];
+        require(reward > 0, "No reward to claim");
+        rewards[msg.sender]=0;
+
+        emit RewardsClaimed(msg.sender, reward);
+
+        bool success = s_rewardToken.transfer(msg.sender, reward); 
+        require(success, "Transfer Failed");
+    } 
 
 }
 
+ 
+
+
+
+
+//  1704784978 = time
